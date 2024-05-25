@@ -1,0 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    text-rendering: optimizeLegibility; /* Melhora a legibilidade do texto em alguns navegadores */
+}
