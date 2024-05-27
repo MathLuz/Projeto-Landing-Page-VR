@@ -82,19 +82,24 @@ main .secao-produto{
     align-items: center;
     color: var(--cor2);
     background: var(--cor1);
+    position: relative;
+    overflow: hidden;
+}
+main .secao-produto .foto-fundo{
+    filter: blur(30px) brightness(0.4);
+    position: absolute;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
 }
 main .secao-produto .apresentacao{
     position: relative;
     text-align: center;
-    /* min-height: 950px; */
 }
 main .secao-produto .apresentacao img{
     width: 80%;
     height: 100%;
-    /* max-height: 950px; */
     object-fit: cover;
-    /* height: 800px; */
-    /* filter: invert(1); */
 }
 main .secao-produto .apresentacao h1{
     color: #fff;
