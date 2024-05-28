@@ -145,7 +145,10 @@ main .secao-troca div img{
     border-radius: var(--bRadius);
     max-height: 845px;
     max-width: 65%;
-    transition: all 1s;
+    transition: 0.2s;
+}
+main .secao-troca div .hidden{
+    opacity: 0;
 }
 main .secao-fotos{
     display: flex;
@@ -173,7 +176,7 @@ footer{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    height: 200px;
 }
 footer div{
     display: flex;
