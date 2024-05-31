@@ -3,11 +3,13 @@ const fotoTroca = document.querySelectorAll('.fotoTroca');
 const fotoHover = ['img/fotos/bike-1.jpg',
                 'img/fotos/bike-4.jpg'];
 var imgSrc = [];
-fotoTroca.forEach(element => {
-    imgSrc.push(element.getAttribute('src'))
+fotoTroca.forEach(elemento => {
+    imgSrc.push(elemento.getAttribute('src'))
 });
-const transition = 10;
-document.querySelector('.fotoTroca').style.transition = transition*2+'ms';
+const transition = 50;
+document.querySelectorAll('.fotoTroca').forEach(elemento =>{
+    elemento.style.transition = transition*2+'ms';
+})
 
 boxTrocaImg.forEach((elemento, i) => {
     elemento.addEventListener('mouseover', function () {

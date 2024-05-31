@@ -76,7 +76,7 @@ header .header nav a::before{
     width: 100%;
     height: 1px;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.2s;
     
 }
 header .header nav a:hover::before{
@@ -171,7 +171,7 @@ main .secao-troca div img{
     z-index: -1;
 }
 main .secao-troca div .hidden{
-    opacity: 0;
+    filter: brightness(0);
 }
 main .secao-fotos{
     display: flex;
@@ -186,7 +186,9 @@ main .secao-fotos div{
     justify-content: space-between;
 }
 main .secao-fotos div img{
-    height: 630px;
+    /* height: ; */
+    max-height: 630px;
+    /* width: 100%; */
     border-radius: var(--bRadius);
 }
 main h2{
@@ -199,33 +201,67 @@ footer{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 400px;
 }
-footer div{
+footer .espaco-footer{
     display: flex;
     width: var(--largura);
-    justify-content: space-evenly;
+    height: 100%;
+    justify-content: space-between;
     align-items: center;
     font-size: 25px;
 }
-footer div .contato{
+footer .espaco-footer .sobre{
+    height: 100%;
+    width: 60%;
     display: flex;
-    gap: 20px;
-    font-size: 45px;
+    align-items: center;
+    justify-content: center;
 }
-.contato a{
+footer .espaco-footer .o-projeto{
+    text-align: center;
+}
+footer .espaco-footer .contato{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .espaco-footer .contato div{
+    width: 70%;
+    height: 150px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+footer .espaco-footer .contato div p{
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0.6;
+}
+footer .espaco-footer .contato div nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 15px;
+}
+.contato div nav a{
+    font-size: 45px;
+    height: 50px;
+    aspect-ratio: 1/1;
+    transition: 0.2s;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3px;
-    /* height: 70px; */
-    aspect-ratio: 1/1;
-    transition: 0.2s;
 }
-.contato a:hover{
+.contato div nav a:hover{
     opacity: 1;
 }
-.contato .insta:hover{
+.contato div nav .insta:hover{
     background: radial-gradient(
         circle at 30% 107%,
          #fdf497 0%,
@@ -236,7 +272,17 @@ footer div .contato{
     background-clip: text;
     color: transparent
 }
-.contato .linke:hover{color: #0A66C2}
-.contato .githu:hover{color: #6e5494}
-.contato .whats:hover{color: #25d366}
-.contato .email:hover{color: #db4a39}
+.contato div nav .linke:hover{color: #0A66C2}
+.contato div nav .githu:hover{color: #6741a0}
+.contato div nav .whats:hover{color: #25d366}
+.contato div nav .email:hover{color: #db4a39}
+
+footer .espaco-footer .contato .dev{
+    /* display: none; */
+    border-top: solid 2px var(--cor4);
+}
+
+
+/* img{
+    display: none;
+} */
