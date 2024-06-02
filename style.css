@@ -240,10 +240,6 @@ main h2 {
     font-size: 30px;
 }
 
-.invert {
-    transform: scaleX(-1);
-}
-
 footer {
     background-color: var(--cor1);
     color: var(--cor2);
