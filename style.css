@@ -13,7 +13,6 @@
     --fSizeH1: 40px;
     --fSizeH2: 30px;
 }
-
 html {
     /* background-color: #111; */
     display: flex;
@@ -23,24 +22,20 @@ html {
     height: 100%;
     scroll-behavior: smooth;
 }
-
 body {
     font-family: San Francisco;
     font-size: var(--fSizeP1);
     width: 100%;
     height: 100%;
 }
-
 .minletra {
     font-size: 50%;
     position: relative;
     bottom: 0.6em;
 }
-
 .fonfina {
     font-weight: 100;
 }
-
 header {
     width: 100%;
     height: 55px;
@@ -53,37 +48,31 @@ header {
     top: 0;
     z-index: 99;
 }
-
 header .header {
     width: var(--largura);
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
 header .header a {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-
 header .header a .logo {
     height: 30px;
 }
-
 header .header nav {
     display: flex;
     justify-content: space-between;
     width: 35%;
 }
-
 header .header nav a {
     color: var(--cor2);
     border-bottom: #ffffff00;
     position: relative;
 }
-
 header .header nav a::before {
     content: '';
     position: absolute;
@@ -94,7 +83,6 @@ header .header nav a::before {
     transition: 0.2s;
 
 }
-
 header .header nav a:hover::before {
     content: '';
     position: absolute;
@@ -112,7 +100,6 @@ main {
     align-items: center;
     padding-bottom: 100px;
 }
-
 main .secao-produto {
     display: flex;
     flex-direction: column;
@@ -123,21 +110,18 @@ main .secao-produto {
     overflow: hidden;
     width: 100%;
 }
-
 main .secao-produto .apresentacao {
     position: relative;
     text-align: center;
     height: var(--aHeight);
     max-height: 100vh;
 }
-
 main .secao-produto .apresentacao img {
     height: var(--aHeight);
     max-height: 100vh;
     max-width: 100%;
     object-fit: cover;
 }
-
 main .secao-produto .apresentacao h1 {
     color: #fff;
     background-color: #00000055;
@@ -150,7 +134,6 @@ main .secao-produto .apresentacao h1 {
     transform: translate(-50%, -50%);
     font-size: var(--fSizeH1);
 }
-
 main section {
     padding: 50px;
     width: 90%;
@@ -162,17 +145,14 @@ main section {
     gap: 40px;
     border-bottom: 4px solid var(--cor4);
 }
-
 main section:last-child {
     border: none;
 }
-
 main .secao-troca div {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-
 main .secao-troca div div {
     display: flex;
     flex-direction: column;
@@ -182,15 +162,12 @@ main .secao-troca div div {
     padding: 0 3%;
     z-index: -1;
 }
-
 main .secao-troca div div p {
-    font-size: 20px;
+    font-size: var(--fSizeP1);
 }
-
 main .secao-troca div div .right {
     text-align: right;
 }
-
 main .secao-troca div img {
     border-radius: var(--bRadius);
     max-height: 845px;
@@ -232,12 +209,13 @@ main .end img {
 }
 
 main .end p {
-    font-size: 25px;
+    font-size: var(--fSizeP1);
     text-align: center;
 }
 main h2 {
-    font-size: 30px;
+    font-size: var(--fSizeH2);
 }
+
 footer {
     background-color: var(--cor1);
     color: var(--cor2);
@@ -303,13 +281,11 @@ footer .espaco-footer .contato div nav {
     justify-content: center;
     align-items: center;
 }
-
 .contato div nav .insta {
     background: #fff;
     background-clip: text;
     color: #fff;
 }
-
 .contato div nav .insta:hover {
     background: radial-gradient(circle at 30% 107%,
     #fdf497 0%,
@@ -347,9 +323,9 @@ footer .espaco-footer .contato .dev {
 @media screen and (max-width: 700px){
     :root{
         --fSizeP1: 11px;
-        --fSizeP2: 16px;
+        --fSizeP2: 15px;
         --fSizeH1: 20px;
-        --fSizeH2: 16px;
+        --fSizeH2: 17px;
     }
     footer .espaco-footer .contato{
         width: 60%;
