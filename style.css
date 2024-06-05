@@ -5,9 +5,12 @@
     --cor3: #111;
     --cor4: #555;
     --largura: 1400px;
-    --altura: 1100px;
     --bRadius: 10px;
     --bShadow: 10px 10px 12px 0 #00000044;
+    --fSizeP1: 19px;
+    --fSizeP2: 25px;
+    --fSizeH1: 40px;
+    --fSizeH2: 30px;
 }
 
 html {
@@ -22,7 +25,7 @@ html {
 
 body {
     font-family: San Francisco;
-    font-size: 18px;
+    font-size: var(--fSizeP1);
     width: 100%;
     height: 100%;
 }
@@ -62,7 +65,7 @@ header .header a .logo{
 header .header nav{
     display: flex;
     justify-content: space-between;
-    width: 300px;
+    width: 35%;
 }
 header .header nav a{
     color: var(--cor2);
@@ -128,7 +131,7 @@ main .secao-produto .apresentacao h1{
     text-align: center;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 40px;
+    font-size: var(--fSizeH1);
 }
 main section{
     padding: 50px;
@@ -158,10 +161,6 @@ main .secao-troca div div{
     padding: 0 3%;
     z-index: -1;
 }
-main .secao-troca div div p{
-    /* width: 50%; */
-    font-size: 20px;
-}
 main .secao-troca div img{
     border-radius: var(--bRadius);
     max-height: 845px;
@@ -169,6 +168,9 @@ main .secao-troca div img{
     background-color: #000;
     /* transition: 0.1s; */
     z-index: -1;
+}
+main .secao-troca div .fotoTroca2{
+    max-width: 40%;
 }
 main .secao-troca div .hidden{
     filter: brightness(0);
@@ -186,13 +188,12 @@ main .secao-fotos div{
     justify-content: space-between;
 }
 main .secao-fotos div img{
-    /* height: ; */
     max-height: 630px;
-    /* width: 100%; */
+    max-width: 33%;
     border-radius: var(--bRadius);
 }
 main h2{
-    font-size: 30px;
+    font-size: var(--fSizeH2);
 }
 footer{
     background-color: var(--cor1);
@@ -209,7 +210,7 @@ footer .espaco-footer{
     height: 100%;
     justify-content: space-between;
     align-items: center;
-    font-size: 25px;
+    font-size: var(--fSizeP2);
 }
 footer .espaco-footer .sobre{
     height: 100%;
@@ -239,7 +240,6 @@ footer .espaco-footer .contato div{
     position: relative;
 }
 footer .espaco-footer .contato div p{
-    font-size: 20px;
     font-weight: 500;
     opacity: 0.6;
 }
@@ -250,8 +250,8 @@ footer .espaco-footer .contato div nav{
     gap: 15px;
 }
 .contato div nav a{
-    font-size: 45px;
-    height: 50px;
+    font-size: 190%;
+    padding: 5px;
     aspect-ratio: 1/1;
     transition: 0.2s;
     display: flex;
@@ -282,7 +282,33 @@ footer .espaco-footer .contato .dev{
     border-top: solid 2px var(--cor4);
 }
 
+/* RESPONSIVIDADE */
+@media screen and (max-width: 1500px){
+    :root{
+        --largura: 95%;
+        --fSizeP1: 15px;
+        --fSizeP2: 20px;
+        --fSizeH1: 30px;
+        --fSizeH2: 25px;
+    }
+    
+    footer .espaco-footer .contato{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 700px){
+    :root{
+        --fSizeP1: 11px;
+        --fSizeP2: 16px;
+        --fSizeH1: 20px;
+        --fSizeH2: 16px;
+    }
+    footer .espaco-footer .contato{
+        width: 60%;
+    }
+}
+
 
 /* img{
-    display: none;
+    filter: brightness(0.05);
 } */
