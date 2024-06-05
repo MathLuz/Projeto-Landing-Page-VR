@@ -1,7 +1,8 @@
 @import url(assets/fonts.css);
+
 :root {
-    --cor1:#000;
-    --cor2:#fff;
+    --cor1: #000;
+    --cor2: #fff;
     --cor3: #111;
     --cor4: #555;
     --largura: 1400px;
@@ -29,11 +30,17 @@ body {
     width: 100%;
     height: 100%;
 }
-.minletra{
+
+.minletra {
     font-size: 50%;
     position: relative;
     bottom: 0.6em;
 }
+
+.fonfina {
+    font-weight: 100;
+}
+
 header {
     width: 100%;
     height: 55px;
@@ -53,26 +60,31 @@ header .header {
     justify-content: space-around;
     align-items: center;
 }
-header .header a{
+
+header .header a {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-header .header a .logo{
+
+header .header a .logo {
     height: 30px;
 }
-header .header nav{
+
+header .header nav {
     display: flex;
     justify-content: space-between;
     width: 35%;
 }
-header .header nav a{
+
+header .header nav a {
     color: var(--cor2);
     border-bottom: #ffffff00;
     position: relative;
 }
-header .header nav a::before{
+
+header .header nav a::before {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -80,9 +92,10 @@ header .header nav a::before{
     height: 1px;
     opacity: 0;
     transition: 0.2s;
-    
+
 }
-header .header nav a:hover::before{
+
+header .header nav a:hover::before {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -91,6 +104,7 @@ header .header nav a:hover::before{
     opacity: 1;
     background-color: #fff;
 }
+
 main {
     color: var(--cor4);
     display: flex;
@@ -98,12 +112,8 @@ main {
     align-items: center;
     padding-bottom: 100px;
 }
-main .secao-produto div{
-    width: 90%;
-    max-width: var(--largura);
-}
-main .secao-produto{
-    width: 100%;
+
+main .secao-produto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,17 +121,24 @@ main .secao-produto{
     background: var(--cor1);
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
-main .secao-produto .apresentacao{
+
+main .secao-produto .apresentacao {
     position: relative;
     text-align: center;
+    height: var(--aHeight);
+    max-height: 100vh;
 }
-main .secao-produto .apresentacao img{
-    width: 80%;
-    height: 100%;
+
+main .secao-produto .apresentacao img {
+    height: var(--aHeight);
+    max-height: 100vh;
+    max-width: 100%;
     object-fit: cover;
 }
-main .secao-produto .apresentacao h1{
+
+main .secao-produto .apresentacao h1 {
     color: #fff;
     background-color: #00000055;
     position: absolute;
@@ -133,7 +150,8 @@ main .secao-produto .apresentacao h1{
     transform: translate(-50%, -50%);
     font-size: var(--fSizeH1);
 }
-main section{
+
+main section {
     padding: 50px;
     width: 90%;
     max-width: 1300px;
@@ -144,15 +162,18 @@ main section{
     gap: 40px;
     border-bottom: 4px solid var(--cor4);
 }
-main section:last-child{
+
+main section:last-child {
     border: none;
 }
-main .secao-troca div{
+
+main .secao-troca div {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-main .secao-troca div div{
+
+main .secao-troca div div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,12 +182,21 @@ main .secao-troca div div{
     padding: 0 3%;
     z-index: -1;
 }
-main .secao-troca div img{
+
+main .secao-troca div div p {
+    font-size: 20px;
+}
+
+main .secao-troca div div .right {
+    text-align: right;
+}
+
+main .secao-troca div img {
     border-radius: var(--bRadius);
+    /* box-shadow: var(--bShadow); */
     max-height: 845px;
     max-width: 65%;
     background-color: #000;
-    /* transition: 0.1s; */
     z-index: -1;
 }
 main .secao-troca div .fotoTroca2{
@@ -175,11 +205,13 @@ main .secao-troca div .fotoTroca2{
 main .secao-troca div .hidden{
     filter: brightness(0);
 }
-main .secao-fotos{
+
+main .secao-fotos {
     display: flex;
     flex-direction: column;
 }
-main .secao-fotos div{
+
+main .secao-fotos div {
     width: 100%;
     height: 100%;
     display: flex;
@@ -189,13 +221,29 @@ main .secao-fotos div{
 }
 main .secao-fotos div img{
     max-height: 630px;
-    max-width: 33%;
+    border-radius: var(--bRadius);
+    box-shadow: var(--bShadow);
+}
+
+main .end {
+    width: 80%;
+}
+
+main .end img {
+    width: 100%;
     border-radius: var(--bRadius);
 }
-main h2{
-    font-size: var(--fSizeH2);
+
+main .end p {
+    font-size: 25px;
+    text-align: center;
 }
-footer{
+
+main h2 {
+    font-size: 30px;
+}
+
+footer {
     background-color: var(--cor1);
     color: var(--cor2);
     display: flex;
@@ -204,7 +252,8 @@ footer{
     align-items: center;
     height: 400px;
 }
-footer .espaco-footer{
+
+footer .espaco-footer {
     display: flex;
     width: var(--largura);
     height: 100%;
@@ -212,17 +261,20 @@ footer .espaco-footer{
     align-items: center;
     font-size: var(--fSizeP2);
 }
-footer .espaco-footer .sobre{
+
+footer .espaco-footer .sobre {
     height: 100%;
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-footer .espaco-footer .o-projeto{
+
+footer .espaco-footer .o-projeto {
     text-align: center;
 }
-footer .espaco-footer .contato{
+
+footer .espaco-footer .contato {
     width: 40%;
     height: 100%;
     display: flex;
@@ -230,7 +282,8 @@ footer .espaco-footer .contato{
     justify-content: center;
     align-items: center;
 }
-footer .espaco-footer .contato div{
+
+footer .espaco-footer .contato div {
     width: 70%;
     height: 150px;
     gap: 10px;
@@ -241,9 +294,10 @@ footer .espaco-footer .contato div{
 }
 footer .espaco-footer .contato div p{
     font-weight: 500;
-    opacity: 0.6;
+    opacity: 0.7;
 }
-footer .espaco-footer .contato div nav{
+
+footer .espaco-footer .contato div nav {
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -253,31 +307,34 @@ footer .espaco-footer .contato div nav{
     font-size: 190%;
     padding: 5px;
     aspect-ratio: 1/1;
-    transition: 0.2s;
+    transition: 0.1s;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.contato div nav a:hover{
-    opacity: 1;
-}
-.contato div nav .insta:hover{
-    background: radial-gradient(
-        circle at 30% 107%,
-         #fdf497 0%,
-          #fdf497 5%,
-           #fd5949 45%,
-            #d6249f 60%,
-             #285AEB 90%);
-    background-clip: text;
-    color: transparent
-}
-.contato div nav .linke:hover{color: #0A66C2}
-.contato div nav .githu:hover{color: #6741a0}
-.contato div nav .whats:hover{color: #25d366}
-.contato div nav .email:hover{color: #db4a39}
 
-footer .espaco-footer .contato .dev{
+.contato div nav .insta {
+    background: #fff;
+    background-clip: text;
+    color: #fff;
+}
+
+.contato div nav .insta:hover {
+    background: radial-gradient(circle at 30% 107%,
+    #fdf497 0%,
+     #fdf497 5%,
+      #fd5949 45%,
+       #d6249f 60%,
+        #285AEB 90%);
+    background-clip: text;
+    color: transparent;
+}
+.contato div nav .linke:hover {color: #0A66C2}
+.contato div nav .githu:hover {color: #9500FE}
+.contato div nav .whats:hover {color: #25d366}
+.contato div nav .email:hover {color: #db4a39}
+
+footer .espaco-footer .contato .dev {
     /* display: none; */
     border-top: solid 2px var(--cor4);
 }
