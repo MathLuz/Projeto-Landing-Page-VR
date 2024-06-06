@@ -8,8 +8,8 @@
     --largura: 1400px;
     --bRadius: 10px;
     --bShadow: 10px 10px 12px 0 #00000044;
-    --fSizeP1: 19px;
-    --fSizeP2: 25px;
+    --fSizeP1: 18px;
+    --fSizeP2: 22px;
     --fSizeH1: 40px;
     --fSizeH2: 30px;
 }
@@ -66,7 +66,7 @@ header .header a .logo {
 header .header nav {
     display: flex;
     justify-content: space-between;
-    width: 35%;
+    width: 25%;
 }
 header .header nav a {
     color: var(--cor2);
@@ -160,10 +160,9 @@ main .secao-troca div div {
     justify-content: space-evenly;
     gap: 50px;
     padding: 0 3%;
-    z-index: -1;
 }
 main .secao-troca div div p {
-    font-size: var(--fSizeP1);
+    font-size: var(--fSizeP2);
 }
 main .secao-troca div div .right {
     text-align: right;
@@ -173,7 +172,6 @@ main .secao-troca div img {
     max-height: 845px;
     max-width: 65%;
     background-color: #000;
-    z-index: -1;
 }
 main .secao-troca div .fotoTroca2{
     max-width: 40%;
@@ -209,7 +207,7 @@ main .end img {
 }
 
 main .end p {
-    font-size: var(--fSizeP1);
+    font-size: var(--fSizeP2);
     text-align: center;
 }
 main h2 {
@@ -326,6 +324,9 @@ footer .espaco-footer .contato .dev {
         --fSizeP2: 15px;
         --fSizeH1: 20px;
         --fSizeH2: 17px;
+        header .header nav {
+            width: 40%;
+        }
     }
     footer .espaco-footer .contato{
         width: 60%;

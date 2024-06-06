@@ -11,7 +11,7 @@ document.querySelectorAll('.fotoTroca').forEach(elemento => {
     elemento.style.transition = transition * 2 + 'ms';
 })
 
-boxTrocaImg.forEach((elemento, i) => {
+fotoTroca.forEach((elemento, i) => {
     // MOUSE OVER
     elemento.addEventListener('mouseover', function () {
         fotoTroca[i].classList.add('hidden');
