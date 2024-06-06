@@ -148,10 +148,15 @@ main section {
 main section:last-child {
     border: none;
 }
+main .secao-troca{
+    display: flex;
+    flex-direction: column;
+}
 main .secao-troca div {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 92%;
 }
 main .secao-troca div div {
     display: flex;
@@ -197,16 +202,25 @@ main .secao-fotos div img{
     border-radius: var(--bRadius);
     box-shadow: var(--bShadow);
 }
-main .end {
-    width: 80%;
+main .end{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-main .end img {
+main .end div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 92%; 
+    gap: 50px;
+}
+main .end div img {
     width: 100%;
     border-radius: var(--bRadius);
     box-shadow: var(--bShadow);
 }
-
-main .end p {
+main .end div p {
     font-size: var(--fSizeP2);
     text-align: center;
 }
