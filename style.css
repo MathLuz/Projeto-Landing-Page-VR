@@ -231,15 +231,15 @@ footer .espaco-footer {
     align-items: center;
     font-size: var(--fSizeP2);
 }
-footer .espaco-footer .sobre {
+footer .espaco-footer .o-projeto {
+    padding: 5%;
     height: 100%;
     width: 60%;
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-footer .espaco-footer .o-projeto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     text-align: center;
 }
 footer .espaco-footer .contato {
