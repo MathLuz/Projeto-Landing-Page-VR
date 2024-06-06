@@ -232,7 +232,6 @@ footer .espaco-footer {
     font-size: var(--fSizeP2);
 }
 footer .espaco-footer .o-projeto {
-    padding: 5%;
     height: 100%;
     width: 60%;
     display: flex;
